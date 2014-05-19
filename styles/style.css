@@ -1,0 +1,97 @@
+.blue {
+	color: #0000ff;
+}
+
+.green {
+	color: #00ff00;
+}
+
+.red {
+	color: #ff0000;
+}
+
+button.color-button {
+
+	border-style: solid;
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+
+button.blue-button {
+	background: #ffffff;
+	border-color: #0000ff;
+	color: #0000ff;
+}
+
+button.blue-button:hover, button.blue-button:focus, 
+button.blue-button-selected, button.blue-button-selected:hover,
+button.blue-button-selected:focus {
+	background: #0000ff;
+	border-color: #0000ff;
+	color: #ffffff;
+}
+
+button.green-button {
+	background: #ffffff;
+	border-color: #00ff00;
+	color: #00ff00;
+}
+
+button.green-button:hover, button.green-button:focus, 
+button.green-button-selected, button.green-button-selected:hover,
+button.green-button-selected:focus {
+	background: #00ff00;
+	border-color: #00ff00;
+	color: #ffffff;
+}
+
+button.red-button {
+	background: #ffffff;
+	border-color: #ff0000;
+	color: #ff0000;
+}
+
+button.red-button:hover, button.red-button:focus, 
+button.red-button-selected, button.red-button-selected:hover,
+button.red-button-selected:focus {
+	background: #ff0000;
+	border-color: #ff0000;
+	color: #ffffff;
+}
+
+button.delete-button {
+	background-color: #ffffff;
+	border: none;
+}
+
+.delete-button-show {
+	display: inline-block;
+	padding: 0px;
+}
+
+.delete-button-hide {
+	display: none;
+}
+
+.delete-button-icon {
+	color: #ff0000;
+	background-color: #ffffff;
+}
+
+.title {
+	text-align: center;
+}
+
+div.newTaskDisplay {
+	margin-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 15px;
+	border: solid;
+	border-width: 2px;
+	border-color: #cccccc;
+	display: none;
+}
+
+div.taskListContainer {
+	margin-top: 10px;
+}

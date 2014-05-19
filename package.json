@@ -1,0 +1,11 @@
+{
+	"name": "temp",
+	"description": "to-do app cada",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "3.x",
+		"mustache": "0.x",
+		"html": "1.x"
+	}
+}
