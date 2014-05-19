@@ -1,15 +1,3 @@
-.blue {
-	color: #0000ff;
-}
-
-.green {
-	color: #00ff00;
-}
-
-.red {
-	color: #ff0000;
-}
-
 button.color-button {
 
 	border-style: solid;
@@ -17,56 +5,14 @@ button.color-button {
 	margin-bottom: 3px;
 }
 
-button.blue-button {
-	background: #ffffff;
-	border-color: #0000ff;
-	color: #0000ff;
-}
-
-button.blue-button:hover, button.blue-button:focus, 
-button.blue-button-selected, button.blue-button-selected:hover,
-button.blue-button-selected:focus {
-	background: #0000ff;
-	border-color: #0000ff;
-	color: #ffffff;
-}
-
-button.green-button {
-	background: #ffffff;
-	border-color: #00ff00;
-	color: #00ff00;
-}
-
-button.green-button:hover, button.green-button:focus, 
-button.green-button-selected, button.green-button-selected:hover,
-button.green-button-selected:focus {
-	background: #00ff00;
-	border-color: #00ff00;
-	color: #ffffff;
-}
-
-button.red-button {
-	background: #ffffff;
-	border-color: #ff0000;
-	color: #ff0000;
-}
-
-button.red-button:hover, button.red-button:focus, 
-button.red-button-selected, button.red-button-selected:hover,
-button.red-button-selected:focus {
-	background: #ff0000;
-	border-color: #ff0000;
-	color: #ffffff;
-}
-
 button.delete-button {
 	background-color: #ffffff;
+	padding: 0px;
 	border: none;
 }
 
 .delete-button-show {
 	display: inline-block;
-	padding: 0px;
 }
 
 .delete-button-hide {
@@ -78,20 +24,42 @@ button.delete-button {
 	background-color: #ffffff;
 }
 
+button.form-button {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .title {
 	text-align: center;
 }
 
-div.newTaskDisplay {
+div.new-task-display {
 	margin-top: 10px;
 	padding-right: 30px;
 	padding-bottom: 15px;
 	border: solid;
 	border-width: 2px;
 	border-color: #cccccc;
-	display: none;
 }
 
 div.taskListContainer {
 	margin-top: 10px;
+}
+
+h3.task-title {
+	display: inline;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+button.edit-button{
+	padding:0px;
+	height: 26px;
+}
+
+span.button-icon {
+	width:100%;
+	height:100%;
 }

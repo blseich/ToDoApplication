@@ -1,11 +1,64 @@
-<div id="template1">
+<div id="task-template">
 {{#items}}
-<div>
-	<button class="delete-button delete-button-hide" value="{{taskId}}">
-		<span class="glyphicon glyphicon-minus-sign delete-button-icon"/>
+<div class="row">
+	<button class="delete-button delete-button-hide col-xs-1" value="{{taskId}}">
+		<span class="glyphicon glyphicon-minus-sign delete-button-icon button-icon"/>
 	</button>
-	<h3 class="{{color}}" style="display: inline">{{title}}</h3>
-	<hr />
+	<h3 class="{{#color}}{{#selected}}{{name}}{{/selected}}{{/color}} col-xs-8 task-title">{{title}}</h3>
+	<button class="btn btn-default col-xs-offset-2 col-xs-1 edit-button" value="{{taskId}}">
+		<span class="glyphicon glyphicon-edit edit-button-icon button-icon"/>
+	</button>
+	<div class="task-form" id="edit-form-{{taskId}}">
+	</div>
 </div>
+<hr />
 {{/items}}
+</div>
+
+<div id="task-form-template">
+	<div class="new-task-display col-xs-offset-2 col-xs-8">
+        <div class="row">
+            <h3 class="col-xs-11">{{#new}}Create New Task{{/new}}{{^new}}Edit Task{{/new}}</h3>
+        </div>
+        <div class="row">
+            <p class="col-xs-2">Title:</p>
+            <input class="col-md-10 col-md-offset-0 col-xs-offset-2 col-xs-10 new-task-title-field" type="text" id="new-task-title" value="{{title}}" />
+        </div>
+        <div class="row">
+            <p class="col-xs-12 col-md-2">Color:</p>
+        </div>
+        <div class="row">
+            {{#color}}
+            	<button class="{{#selected}}{{name}}-button-selected{{/selected}}{{^selected}}{{name}}-button{{/selected}} color-button col-xs-offset-2 col-xs-8 col-md-2 btn" id="{{name}}Button" value="{{name}}">{{name}}</button>
+            {{/color}}
+        </div>
+        <div class="row">
+            <button class="btn col-xs-offset-1 col-md-4 col-xs-5 form-button" id="closeButton">Close</button>
+            <button class="btn col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-5 form-button" id="submitButton" value="{{taskId}}">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div id="style-template">
+<style>
+	{{#colors}}
+		button.{{name}}-button {
+			background: #ffffff;
+			border-color: {{colorValue}};
+			color: {{colorValue}};
+		}
+
+		button.{{name}}-button:hover, button.{{name}}-button:focus, 
+		button.{{name}}-button-selected, button.{{name}}-button-selected:hover,
+		button.{{name}}-button-selected:focus {
+			background: {{colorValue}};
+			border-color: {{colorValue}};
+			color: #ffffff;
+		}
+
+		.{{name}} {
+			color: {{colorValue}};
+		}
+	{{/colors}}
+</style>
 </div>
